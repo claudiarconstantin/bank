@@ -13,7 +13,13 @@ class Bank:
         self.arhiva = []
 
     def register_employee(self, person):
+        for p in self.arhiva:
+            if p.cnp == person.cnp:
+                print(f"Persoana cu CNP-ul {person.cnp} deja exista!")
+                return
+
         self.arhiva.append(person)
+        print(f"Persoana {person.nume} {person.prenume} a fost inregistrata cu success!")
 
     def unregister_employee(self, cnp):
         self.arhiva = [p for p in self.arhiva if p.cnp != cnp]
