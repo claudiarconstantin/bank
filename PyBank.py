@@ -12,6 +12,9 @@ class Employee(Person):
         super().__init__(nume, prenume, cnp)
         self.job = job
 
+    def print_details(self):
+        print(f"Nume: {self.nume}, Prenume: {self.prenume}, CNP: {self.cnp}, Job: {self.job}")
+
     def print_my_job(self):
         print(f"My job is {self.job}.")
 
